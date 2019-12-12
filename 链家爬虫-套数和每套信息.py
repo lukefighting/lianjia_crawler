@@ -66,6 +66,7 @@ def get_info(xiaoqu,soup):
         info345relist = info345re.split("/")
         info3 = info345relist[1]    #布局
         info4 = float(re.sub('平米','',info345relist[2]))    #平米
+        if info4 > 120:continue
         info5 = info345relist[4]    #装修
         info6 = float('%.2f'%(info1/info4))
         info_list.append([xiaoqu,info2,info3,info5,info4,info1,info6])     #小区名、标题、布局、装修、平米、总价(万)、单价(万)
